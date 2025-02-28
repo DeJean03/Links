@@ -22,17 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
     alert('Form submitted successfully');
   });
 
-  const newsletterForm = document.getElementById('newsletterForm');
+  const newsletterForm = document.getElementById('blogForm');
   newsletterForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    const newsletterEmail = document.getElementById('newsletterEmail').value;
+    const newsletterEmail = document.getElementById('blogEmail').value;
     const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     if (!emailRegex.test(newsletterEmail)) {
-      document.getElementById('newsletterError').textContent = 'Invalid email format';
+      document.getElementById('blogError').textContent = 'Invalid email format';
       return;
     }
-    document.getElementById('newsletterError').textContent = '';
-    alert('Newsletter form submitted successfully');
+    document.getElementById('blogError').textContent = '';
+    alert('Blog form submitted successfully');
   });
 });
 
